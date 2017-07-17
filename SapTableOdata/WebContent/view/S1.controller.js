@@ -9,7 +9,7 @@ sap.ui.controller("SapTableOdata.view.S1", {
 */
 	onInit: function() {
 		
-		
+		//This is second commit///////////
 		var oDate=new Date();
 		 var ctFromTstamp = SapTableOdata.util.formatter.mdate(oDate);
 		 
