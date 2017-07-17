@@ -1,0 +1,69 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="SapTableOdata.view.S1" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+		<Image src="{model>\img.jpg}" />
+	<SearchField xmlns="sap.m" id="id" busy="false"
+	busyIndicatorDelay="1000" visible="true" value="" width="20%" enabled="true"
+	 maxLength="0" placeholder="" showMagnifier="true"
+	showRefreshButton="false" refreshButtonTooltip="" showSearchButton="true"
+	selectOnFocus="true" ariaDescribedBy="" ariaLabelledBy="" search=""
+	liveChange="onSearch"/>
+
+
+	<Table id="otable" inset="false" visible="true" mode="MultiSelect" selectionChange="NavTONext"
+		items="{/results}">
+	<columns>
+	<Column>
+	<Text text="ENO"/></Column>
+	<Column><Text text="FIRST NAME"/></Column>
+	<Column><Text text="LAST NAME"/></Column>
+	</columns>
+	
+	<items>
+	<ColumnListItem>
+	<Text text="{EmployeeID}"/>
+	<Text text="{FirstName}"/>
+	<Text text="{LastName}"/>
+	</ColumnListItem>
+	</items>
+	
+	</Table>
+	
+	<Table id="otable234" inset="false" visible="true" mode="SingleSelectMaster" selectionChange="NavTONext">
+	<columns>
+	<Column>
+	<Text text="OTF"/></Column>
+	<Column><Text text="FROM"/></Column>
+	<Column><Text text="TO"/></Column>
+	<Column><Text text="VALUE"/></Column>
+	<Column><Text text="VALUE"/></Column>
+	</columns>
+	</Table>
+	<html:iframe id="video1" height="350" 
+    src="//www.youtube.com/embed/mYbn9Q6P0cU?enablejsapi=1" frameborder="4" width="50%"  allowfullscreen="true">
+    </html:iframe>
+	<!-- <video width='400' height='300'>
+E:\songs\video songs\Muga Manase Video Song - Nava Vasantham Movie
+  <source src='http://172.22.x.x:8081/stream.ogg' type='video/ogg'/>
+</video> -->
+<!-- //src="//www.youtube.com/embed/mYbn9Q6P0cU?enablejsapi=1" -->
+	<!--  <Image src="img\sirivennela.3gp" width="50%" /> -->
+	<!--  <Button text="{path: 'omodel>/fname', formatter: 'SapTableOdata.util.formatter.toUpperCase'}"> -->
+	<Label text="fname" />
+	<Input id="fnameid" />
+	<Input value="{omodel>lname}" />
+	<!-- <Button text="{path: 'omodel>lname'}"/> -->
+	
+
+</content>
+       <footer>
+       <Bar>
+       <contentRight>
+       <Button type="Accept" text="onCommonSave" press="onCommonSave" id="save"/>
+       <Button type="Reject" text="GST" id="gst1" press="onChange" visible="false" icon="sap-icon://add"/>
+       </contentRight>
+       </Bar>
+       </footer>
+	</Page>
+</core:View>

@@ -1,0 +1,14 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="SapTableOdata.view.S2" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+	<MultiComboBox id="idcombo" selectionChange="onChange" selectionFinish="onFinish"  items="{/results}" width="30%">
+	<core:Item key="{EmployeeID}" text="{FirstName}"/>
+	</MultiComboBox>
+	<MultiComboBox id="idcombo2" width="30%" />
+	</content>
+	</Page>
+	
+		
+	
+</core:View>
